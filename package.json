@@ -1,0 +1,54 @@
+{
+    "name": "soyolint",
+    "displayName": "Soyolint",
+    "description": "",
+    "version": "0.0.1",
+    "icon": "./images/soyo.png",
+    "publisher": "marukun712",
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": ["*"],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [{
+            "command": "soyolint.check",
+            "title": "Soyolint Check"
+        }],
+        "menus": {
+            "editor/context": [{
+                "when": "editorHasSelection",
+                "command": "soyolint.check",
+                "group": "myGroup@1"
+            }]
+        },
+        "configuration": {
+            "title": "Soyolint",
+            "properties": {
+                "soyolint.autosave": {
+                    "type": "boolean",
+                    "description": "ドキュメントのセーブ時にSoyolint Checkを行うか。",
+                    "default": "false"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "yarn run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.82.0",
+        "@types/mocha": "^10.0.2",
+        "@types/node": "18.x",
+        "eslint": "^8.50.0",
+        "glob": "^10.3.3",
+        "mocha": "^10.2.0",
+        "typescript": "^5.2.2",
+        "@vscode/test-electron": "^2.3.4"
+    }
+}
