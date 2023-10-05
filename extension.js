@@ -13,7 +13,7 @@ function getWebviewContent() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
-            <img src="./images/soyo.png" />
+            <img src="https://github.com/marukun712/Soyolint/raw/master/images/soyo.png"/>
         </body>
     </html>`;
 }
