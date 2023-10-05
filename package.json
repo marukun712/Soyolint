@@ -3,8 +3,12 @@
     "displayName": "Soyolint",
     "description": "",
     "version": "0.0.1",
-    "icon": "./images/soyo.png",
+    "icon": "images/soyo.png",
     "publisher": "marukun712",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/marukun712/Soyolint.git"
+    },
     "engines": {
         "vscode": "^1.82.0"
     },
